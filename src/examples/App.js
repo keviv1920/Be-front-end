@@ -1,52 +1,30 @@
-import React, { useState, useMemo } from 'react';
-import Pagination from '../Pagination';
-import data from './data/mock-data.json';
-import './style.scss';
+import About from './components/About/About';
+import Coal from './components/Prediction/Coal';
+import Home from './components/Home';
+import NaturalGas from './components/Prediction/NaturalGas';
+import Petroleum from './components/Prediction/Petroleum';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-let PageSize = 10;
-
-export default function App() {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const currentTableData = useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * PageSize;
-    const lastPageIndex = firstPageIndex + PageSize;
-    return data.slice(firstPageIndex, lastPageIndex);
-  }, [currentPage]);
-
+export default function App() { 
+  
+ 
   return (
     <>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>FIRST NAME</th>
-            <th>LAST NAME</th>
-            <th>EMAIL</th>
-            <th>PHONE</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentTableData.map(item => {
-            return (
-              <tr>
-                <td>{item.id}</td>
-                <td>{item.first_name}</td>
-                <td>{item.last_name}</td>
-                <td>{item.email}</td>
-                <td>{item.phone}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <Pagination
-        className="pagination-bar"
-        currentPage={currentPage}
-        totalCount={data.length}
-        pageSize={PageSize}
-        onPageChange={page => setCurrentPage(page)}
-      />
+    <Router>{/* All routes are nested inside it */}
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/About' element={<About/>} />
+      <Route path='/naturalgas' element={<NaturalGas/>} />
+      <Route path='/Coal' element={<Coal/>} />
+      <Route path='/Petroleum' element={<Petroleum/>} />
+    
+    </Routes>
+    {/* <NaturalGas/> */}
+    {/* <Coal/> */}
+    {/* <Petroleum/> */}
+  {/* <About/> */}
+    </Router>
     </>
   );
 }

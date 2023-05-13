@@ -1,0 +1,130 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Raleway:100,600'; 
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';  
+
+/* html { height: 100%; }
+body { background: #FFF; font: 400 1.5em/1.5 "Droid Serif", serif; color: #111; text-align: center; height: 100%; } */
+
+
+
+
+/* nav   */
+/* .navbar{
+  background-color: #000;
+  z-index: 1000;
+  
+}
+#logo{
+  color: #fff;
+}
+.nav-item a{
+  color: rgb(255, 255, 255);
+} */
+
+
+
+
+/* google */
+
+:root {
+    /* Font Color */
+    --light-theme: #ffffff;
+    
+    /* Circle Width */
+    --circle-diameter: 200px;
+
+    /* Font Family */
+    --fonts-style-x: 'neuzeit-grotesk', sans-serif;
+    --fonts-style-y: 'neuzeit-grotesk', sans-serif;
+
+    /* Font Weight */
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+
+}
+
+
+/* *, *::before, *::after {
+    box-sizing: inherit;
+} */
+main {
+    position: relative;
+    left: 15%;
+    display: flex;
+    bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 60vh;
+    /* min-height: 640px; */
+    
+    opacity: 0.9;
+    background-color: #ffffff;
+}
+::selection {
+    color: #fff;
+    background-color: #ffffff;
+}
+.google-map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 200px;
+    background-color: #eee;
+    transition: 2000ms;
+    cursor: grab;
+}
+.google-map .map-frame {
+    width: 90vw;
+    height: 90vh;
+    background-color: #ffffff;
+    border-radius: 5px;
+    
+}
+
+.google-map iframe {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+    pointer-events: visibleStroke;
+}
+
+
+/* ------------------ */
+/* Interactive Effect */
+/* ------------------ */
+
+.google-map:hover {
+    width: 70vw;
+    height: 60vh;
+    border-radius: 10px;
+}
+
+/* map dark */
+.maps{
+    filter: grayscale(100%) invert(92%) contrast(90%);
+}
+
+/* blank */
+.blank{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.blank h2{
+    text-align: center;
+    font-weight: bolder;
+}
+.blank p{
+    text-align: center;
+    color: #F24259;
+    font-weight: 600;
+}
+.blank span{
+    color: #F24259;
+}

@@ -1,0 +1,70 @@
+#carouselExampleCaptions {
+      height: 55vh;
+  }
+  
+  /* Set background image for each slide */
+  #carouselExampleCaptions .carousel-item:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1682166440651-1b8f03f1327b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+  }
+  
+  #carouselExampleCaptions .carousel-item:nth-child(2) {
+    background-image: url("/config/workspace/public/images/marcin-jozwiak-T-eDxGcn-Ok-unsplash.jpg");
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #carouselExampleCaptions .carousel-item:nth-child(3) {
+    background-image: url("/config/workspace/public/images/2019-11-03T051619Z_581825828_RC175A2EBA10_RTRMADP_3_INDIA-POLLUTION-1200x774.jpg");
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+  }
+  
+  .container h1{
+    position: relative;
+    top:20%;
+  }
+  /* Add fade-in animation to captions */
+  .fade-in {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0)
+    );
+    border-radius: 20px 0 0 20px;
+    padding: 10px;
+    animation: fadeIn 3s ease-in-out;
+    /*       opacity: 0; */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Tinggi carousel pada layar lebar */
+  @media (min-width: 768px) {
+    #carouselExampleCaptions .carousel-item {
+      height: 80vh;
+    }
+  }
+  
+  /* Tinggi carousel pada layar kecil */
+  @media (max-width: 576px) {
+    #carouselExampleCaptions .carousel-item {
+      height: 100vh;
+    }
+  }
+  
